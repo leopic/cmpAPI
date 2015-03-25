@@ -24,12 +24,12 @@ var _buscarPorId = function(id) {
 }
 
 // GET lista
-router.get('/', cors(), function(req, res, next) {
+router.get('/', cors(), function(req, res) {
     res.status(200).send(carros);
 });
 
 // GET unico
-router.get('/:id', cors(), function(req, res, next) {
+router.get('/:id', cors(), function(req, res) {
     var carro = _buscarPorId(req.params.id);
     carro ? res.send(carro) : res.sendStatus(404);
 });
