@@ -21,15 +21,19 @@ var _buscarPorId = function(id) {
     return _.find(carros, function(carro) {
         return carro.id == id;
     });
-}
+};
 
 // GET lista
 router.get('/', cors(), function(req, res) {
-    res.status(200).send(carros);
+    console.log('[N] lista');
+    res.status(200).send({
+        'carros': carros
+    });
 });
 
 // GET unico
 router.get('/:id', cors(), function(req, res) {
+    console.log('[N] detalle');
     var carro = _buscarPorId(req.params.id);
     carro ? res.send(carro) : res.sendStatus(404);
 });

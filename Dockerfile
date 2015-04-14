@@ -22,6 +22,6 @@ EXPOSE  3000
 # Iniciando el servidor
 CMD     ["nodemon", "/src/bin/www"]
 
-#docker build -t leopic/componentes-node-servidor /Users/leo/Sites/rest/
-#docker run --name servidor -p 4000:3000 -d -v /Users/leo/Sites/rest:/src leopic/componentes-node-servidor
-#docker logs -tf servidor
+#docker build -t leopic/componentes-servidor-node /Users/leo/Sites/componentes/servidorNode
+#docker run --name servidor-node -p 4002:3000 -d -v /Users/leo/Sites/componentes/servidorNode:/src leopic/componentes-servidor-node
+#docker logs -tf servidor-node
